@@ -54,3 +54,29 @@ void uart2_transmit(int ch)
 ///
 ///
 
+
+void pa_0_EXTI_Init(void)
+{
+	/*
+//Disable global interrupt
+	__disable_irq();
+//Enable clock access for GPIOA
+RCC->AHB1ENR |= (1U << 0);
+//set pc13 as input
+//input by deafoult.
+GPIOC->MODER &= ~((1U << 0) | (1U << 1));
+//our exti is part of the sysconfig module so we need to enable the clock here.to sysconfig.
+RCC->APB2ENR |= (1U << 14);
+//select port c for pin 13
+SYSCFG->EXTICR[0] &= ~ ((1U << 0) | (1U << 1) | (1U << 2) | (1U << 3));
+//unmask exti 13
+EXTI->IMR |= (1U << 0);
+//select falling edge trigger.
+EXTI->FTSR |= (1U << 0);
+//Enable EXTI13 in NVIC:
+NVIC_EnableIRQ(EXTI0_IRQn);
+//Enable global interrupt
+__enable_irq();
+*/
+}
+
